@@ -10,6 +10,9 @@ namespace BankAccountWithTests
     {
         static void Main(string[] args)
         {
+            //make a new BankAccount object
+            //var acc = new BankAccount("A123");
+            //acc.Balance = 1000000;
         }
     }
 }
