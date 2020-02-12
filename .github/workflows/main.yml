@@ -17,3 +17,7 @@ jobs:
       uses: warrenbuckley/Setup-MSBuild@v1
     - name: Build with MSBuild
       run: msbuild BankAccountWithTests.sln -p:Configuration=Release
+    - name: Setup VSTest.exe
+      uses: Malcolmnixon/Setup-VSTest@v2
+    - name: VSTest
+      run: vstest.console BankAccountWithTests.Tests\bin\Release\BankAccountWithTests.Tests.dll
