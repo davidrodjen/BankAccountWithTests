@@ -12,9 +12,17 @@ namespace BankAccountWithTests
         //Field
         private string accountNumber;
 
-        public BankAccount(string accNum)
+
+        public BankAccount(string accNum) : this(accNum, 0.00) //pass in another constructor, condense code
+        {
+
+        }
+
+        public BankAccount(string accNum, double initialBal)
         {
             AccountNumber = accNum;
+            Balance = initialBal;
+
         }
 
         public string AccountNumber 
@@ -60,10 +68,10 @@ namespace BankAccountWithTests
 
         public double withdraw(double amt)
         {
-            if(amt >= 0)
-            {
-                throw new ArgumentException("You must withdraw a positive amount");
-            }
+            //if(amt >= 0)
+            //{
+            //    throw new ArgumentException("You must withdraw a positive amount");
+            //}
             Balance -= amt;
             return Balance;
         }
